@@ -2,7 +2,8 @@ let sounds = [
               "八嘎(高音版)", 
               "挖咧巴噗", 
               "有嗎?我本來就很可愛吧?嘎～",
-              "雜魚~雜魚~ unbelievable"
+              "雜魚~雜魚~ unbelievable",
+              "薑~ 完成~"
             ]; //<audio> tag's id
 let soundtemp = "";
 
