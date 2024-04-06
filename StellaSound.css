@@ -1,7 +1,7 @@
 
   @charset"UTF-8";
 
-  body {
+  /*body {
     background-color: rgb(214, 181, 214);
     background-image: url(./winter_Christmas_HS165_90.jpg);
     background-repeat: no-repeat;
@@ -10,22 +10,68 @@
     color: white;
     margin: 0;
     padding: 0;
-    display: flex; /*讓內容垂直置中*/
-    flex-wrap: wrap; /*寬度不夠時自動換行*/
+    display: flex; 
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     height: 70vh;
     overflow: hidden;
     text-align: center;
+  }*/
+  html { height: 100%}  
+  body {
+        height:100%;margin:10px;padding:10px;
+        background-color: rgb(214, 181, 214);
+        background-image: url(./winter_Christmas_HS165_90.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+
+      }  
+  table{height: 100%;width: 100%;}
+
+  .text {
+    border: 0;
+    font-size: 40px;
+    width: 200px;
+    margin: 0px;
+    left: 0%;
+    transform: translate(0%, 10%);
   }
+
+  .info {
+    border: 1px solid red; /*或none*/
+    border-radius: 10px;
+
+    width: 80px;
+
+    padding: 1px;
+    
+    font-size: 18px;
+	  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+    cursor: pointer;
+    
+    transform: translate(210%, -100%);
+
+  }
+
+
   /*配合javaScript */
   .btn {
     border-radius: 5px;
-    border: 0; /*或none*/
-    margin: 10px;
+    border: 2px solid #4CAF50; /*或none*/
+    margin: 5px;
     padding: 10px;
     font-size: 18px;
     cursor: pointer;
+	  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+    
+    flex-wrap: wrap;
+    position: relative;
+    left: 5%;
+    transform: translate(0%, 50%);
   }
   .btn:hover {
     opacity: 0.8;
@@ -33,3 +79,5 @@
   .btn:focus {
     outline: 0; /*或none*/
   }
+
+  
