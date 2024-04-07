@@ -1,3 +1,4 @@
+/*
 let sounds = [
               "八嘎(高音版)", 
               "挖咧巴噗", 
@@ -7,6 +8,17 @@ let sounds = [
               "打咩嘎(遊戲音效聲有)",
               "嗚欸"
             ]; //<audio> tag's id
+*/
+/***************************************************************************/
+// 創建一個空的陣列來存放具有 "item" 類的元素
+let sounds = [];
+
+// 選擇所有帶有 "audio" 類的元素並將它們添加到陣列中
+let items = document.querySelectorAll('audio');
+items.forEach(audio => {
+  sounds.push(audio.id);
+});
+/***************************************************************************/
 let soundtemp = "";
 
 sounds.forEach((sound) => {
@@ -35,5 +47,12 @@ function stopSounds() {
     let song = document.getElementById(sound);
     song.pause();
     song.currentTime = 0;
+
+
+      // 監聽音訊播放結束事件
+        song.addEventListener("ended", function() {
+        soundtemp = "";
+      });
   });
 }
+
