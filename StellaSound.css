@@ -18,15 +18,18 @@
     overflow: hidden;
     text-align: center;
   }*/
-  html { height: 100%}  
+  
+  html { height: 100%;
+         width:100%;}  
   body {
         height:100%;margin:10px;padding:10px;
         background-color: rgb(214, 181, 214);
         background-image: url(./winter_Christmas_HS165_90.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        
+
         user-select: none;
+        position: absolute;
       }  
   table{height: 100%;width: 100%;}
 
@@ -56,6 +59,15 @@
 
   }
 
+  /* 定義按鈕容器的 CSS 類，用於實現換行 */
+  .button-container {
+    display: flex;
+    gap: 10px; /* 按鈕之間的間距 */
+  }
+  /* 這是我們將添加的 CSS 類，用於實現換行 */
+  .wrap {
+    flex-wrap: wrap; /* 設置換行條件 */
+  }
 
   /*配合javaScript */
   .btn {
@@ -66,10 +78,11 @@
     font-size: 18px;
     cursor: pointer;
 	  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+    height: auto;
+    width:auto;
     
-    
-    flex-wrap: wrap;
-    position: relative;
+    /*position: relative;*/
     left: 5%;
     transform: translate(0%, 50%);
   }
@@ -79,5 +92,6 @@
   .btn:focus {
     outline: 0; /*或none*/
   }
+  
 
   

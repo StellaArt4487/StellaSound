@@ -21,6 +21,8 @@ items.forEach(audio => {
 /***************************************************************************/
 let soundtemp = "";
 
+var buttonContainer = document.getElementById("buttonContainer");
+
 sounds.forEach((sound) => {
   let btn = document.createElement("button");
   btn.classList.add("btn");
@@ -39,7 +41,11 @@ sounds.forEach((sound) => {
         soundtemp = "";
     }
   });
+  // 將按鈕添加到按鈕容器中
+  buttonContainer.appendChild(btn);
   document.getElementById("buttons").appendChild(btn);
+  // 添加 CSS 類來實現按鈕的自動換行
+  buttonContainer.classList.add("wrap");
 });
 
 function stopSounds() {
@@ -55,4 +61,3 @@ function stopSounds() {
       });
   });
 }
-
