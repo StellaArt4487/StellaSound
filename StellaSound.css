@@ -26,6 +26,7 @@
         background-color: rgb(214, 181, 214);
         background-image: url(./winter_Christmas_HS165_90.jpg);
         background-repeat: no-repeat;
+        background-position: center;
         background-size: cover;
 
         user-select: none;
@@ -56,7 +57,20 @@
     cursor: pointer;
     
     transform: translate(210%, -100%);
+  }
+  .palybut{
+    border: 1px solid red; /*或none*/
+    border-radius: 10px;
 
+    width: 80px;
+
+    padding: 1px;
+    
+    font-size: 18px;
+	  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+    cursor: pointer;
+    
   }
 
   /* 定義按鈕容器的 CSS 類，用於實現換行 */

@@ -20,6 +20,8 @@ items.forEach(audio => {
 });
 /***************************************************************************/
 let soundtemp = "";
+// 保存用户选择的播放顺序
+let playSequence = [];
 
 var buttonContainer = document.getElementById("buttonContainer");
 
@@ -29,6 +31,7 @@ sounds.forEach((sound) => {
   btn.innerText = sound;
   btn.addEventListener("click", () => {
     stopSounds();
+    playSequence.push(sound);
 
     if(soundtemp != sound)
     {
@@ -60,4 +63,23 @@ function stopSounds() {
         soundtemp = "";
       });
   });
+}
+
+
+// 播放声音顺序
+const playSequenceButton = document.getElementById('playSequenceButton');
+playSequenceButton.addEventListener('click', () => {
+    playSoundsInSequence(playSequence);
+});
+
+function playSoundsInSequence(sequence) {
+    if (sequence.length === 0) return;
+
+    const audio = document.getElementById(sequence[0]);
+    audio.play();
+
+    audio.addEventListener('ended', () => {
+        sequence.shift(); // 播放完当前音频后移除它
+        playSoundsInSequence(sequence); // 递归播放下一个
+    }, { once: true }); // 确保只执行一次
 }
