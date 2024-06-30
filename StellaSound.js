@@ -22,6 +22,7 @@ items.forEach(audio => {
 let soundtemp = "";
 // 保存用户选择的播放顺序
 let playSequence = [];
+let randomplayiset = [];
 
 var buttonContainer = document.getElementById("buttonContainer");
 
@@ -65,13 +66,12 @@ function stopSounds() {
   });
 }
 
-
 // 播放声音顺序
 const playSequenceButton = document.getElementById('playSequenceButton');
 playSequenceButton.addEventListener('click', () => {
     playSoundsInSequence(playSequence);
 });
-
+//批次播放功能
 function playSoundsInSequence(sequence) {
     if (sequence.length === 0) return;
 
@@ -82,4 +82,30 @@ function playSoundsInSequence(sequence) {
         sequence.shift(); // 播放完当前音频后移除它
         playSoundsInSequence(sequence); // 递归播放下一个
     }, { once: true }); // 确保只执行一次
+}
+
+//隨機撥放功能
+const playRamdonButton = document.getElementById('playRamdonButton');
+playRamdonButton.addEventListener('click', () => {
+    playRamdonInSequence();
+});
+function playRamdonInSequence() {
+  let randomNum = getRandomInt(5);
+  
+  for (let i = 0; i < randomNum; i++) {
+    randomplayiset.push(sounds[getRandomInt(sounds.length)]);
+  }
+  randomplay();
+}
+function randomplay(){
+  const randomaudio = document.getElementById(randomplayiset[0]);
+  randomaudio.play();
+  randomaudio.addEventListener('ended', () => {
+    randomplayiset.shift(); // 播放完当前音频后移除它
+    randomplay(); // 递归播放下一个
+  }, { once: true }); // 确保只执行一次
+}
+//亂數產生
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
 }

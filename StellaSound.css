@@ -73,6 +73,21 @@
     
   }
 
+  .palyRambut{
+    border: 1px solid red; /*或none*/
+    border-radius: 10px;
+
+    width: 80px;
+
+    padding: 1px;
+    
+    font-size: 18px;
+	  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+    cursor: pointer;
+    
+  }
+
   /* 定義按鈕容器的 CSS 類，用於實現換行 */
   .button-container {
     display: flex;
