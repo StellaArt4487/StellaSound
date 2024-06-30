@@ -98,6 +98,8 @@ function playRamdonInSequence() {
   randomplay();
 }
 function randomplay(){
+  if (randomplayiset.length === 0) return;
+
   const randomaudio = document.getElementById(randomplayiset[0]);
   randomaudio.play();
   randomaudio.addEventListener('ended', () => {
