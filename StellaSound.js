@@ -12,6 +12,7 @@ let sounds = [
 /***************************************************************************/
 // 創建一個空的陣列來存放具有 "item" 類的元素
 let sounds = [];
+let firstpush = 1;
 
 // 選擇所有帶有 "audio" 類的元素並將它們添加到陣列中
 let items = document.querySelectorAll('audio');
@@ -35,12 +36,15 @@ sounds.forEach((sound) => {
     stopSounds();
     if (flag === 1) {playSequence.push(sound);}
     
-
     if(soundtemp != sound)
     {
         document.getElementById(sound).play();
     //上面的sound不需用字串符號包起來，因為它本身是一個變數，代表audio標籤內的id
         soundtemp  = sound;
+        if(firstpush === 1 )
+        {
+          firstpush = 2;
+        }
     }
     else
     {
@@ -55,17 +59,20 @@ sounds.forEach((sound) => {
 });
 
 function stopSounds() {
-  sounds.forEach((sound) => {
-    let song = document.getElementById(sound);
-    song.pause();
-    song.currentTime = 0;
+  if(firstpush != 1)
+  {
+    sounds.forEach((sound) => {
+      let song = document.getElementById(sound);
+      song.pause();
+      song.currentTime = 0;
 
-
-      // 監聽音訊播放結束事件
-        song.addEventListener("ended", function() {
-        soundtemp = "";
-      });
-  });
+        // 監聽音訊播放結束事件
+          song.addEventListener("ended", function() {
+          soundtemp = "";
+        });
+    });
+  }
+  else{soundtemp = "";}
 }
 
 // 播放声音顺序
