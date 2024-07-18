@@ -41,9 +41,13 @@ sounds.forEach((sound) => {
         document.getElementById(sound).play();
     //上面的sound不需用字串符號包起來，因為它本身是一個變數，代表audio標籤內的id
         soundtemp  = sound;
-        if(firstpush === 1 )
+        if(firstpush === 1 )//修正第一次按下會延遲問題
         {
           firstpush = 2;
+          let test = document.getElementById(sound);
+          test.addEventListener("ended", function() {
+            soundtemp = "";
+          });
         }
     }
     else
