@@ -20,7 +20,9 @@ items.forEach(audio => {
 });
 /***************************************************************************/
 let soundtemp = "";
+let soundtemp1 = "";
 let flag = 0;
+let flagfirst = 1;
 // 保存用户选择的播放顺序
 let playSequence = [];
 let randomplayiset = [];
@@ -32,7 +34,10 @@ sounds.forEach((sound) => {
   btn.classList.add("btn");
   btn.innerText = sound;
   btn.addEventListener("click", () => {
-    stopSounds(sound);
+
+    if(soundtemp1 === ""){stopSounds(sound);soundtemp1 = sound;}
+    else{stopSounds(soundtemp1);}
+    
     if (flag === 1) {playSequence.push(sound);}
     
     if(soundtemp != sound)
@@ -40,10 +45,12 @@ sounds.forEach((sound) => {
         document.getElementById(sound).play();
     //上面的sound不需用字串符號包起來，因為它本身是一個變數，代表audio標籤內的id
         soundtemp  = sound;
+        soundtemp1 = soundtemp;
     }
     else
     {
       soundtemp = "";
+      soundtemp1 = "";
     }
   });
   // 將按鈕添加到按鈕容器中
@@ -62,6 +69,7 @@ function stopSounds(test) {
         
         // 監聽音訊播放結束事件
           song.addEventListener("ended", function() {
+          soundtemp1 = "";
           soundtemp = "";
         });
     //});
