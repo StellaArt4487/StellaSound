@@ -108,6 +108,7 @@ function playSoundsInSequence(sequence) {
 //隨機撥放功能
 const playRamdonButton = document.getElementById('playRamdonButton');
 playRamdonButton.addEventListener('click', () => {
+    playRamdonButton.textContent = '播放中';
     playRamdonInSequence();
 });
 function playRamdonInSequence() {
@@ -119,7 +120,7 @@ function playRamdonInSequence() {
   randomplay();
 }
 function randomplay(){
-  if (randomplayiset.length === 0) return;
+  if (randomplayiset.length === 0){playRamdonButton.textContent = '隨機撥放'; return;}
 
   const randomaudio = document.getElementById(randomplayiset[0]);
   randomaudio.play();
