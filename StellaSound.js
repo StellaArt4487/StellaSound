@@ -33,7 +33,7 @@ var buttonContainer = document.getElementById("buttonContainer");
 sounds.forEach((sound) => {
   let btn = document.createElement("button");
   btn.classList.add("btn");
-  btn.innerText = serial_number + ". " + sound;  // 设置按钮文本为序号 + 音频 ID
+  btn.innerText = serial_number.toString() + ". " + sound;  // 设置按钮文本为序号 + 音频 ID
   serial_number++;  // 序号递增
   btn.addEventListener("click", () => {
 
@@ -56,7 +56,6 @@ sounds.forEach((sound) => {
     }
   });
   // 將按鈕添加到按鈕容器中
-  buttonContainer.appendChild(btn);
   document.getElementById("buttons").appendChild(btn);
 });
 
