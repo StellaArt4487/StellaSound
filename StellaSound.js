@@ -57,7 +57,7 @@ sounds.forEach((sound) => {
   });
   // 將按鈕添加到按鈕容器中
   buttonContainer.appendChild(btn);
-  ////document.getElementById("buttons").appendChild(btn);
+  document.getElementById("buttons").appendChild(btn);
 });
 
 function stopSounds(test) {
