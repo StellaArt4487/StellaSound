@@ -14,6 +14,7 @@ let sounds = [
 let sounds = [];
 
 // 選擇所有帶有 "audio" 類的元素並將它們添加到陣列中
+let serial_number = 1;
 let items = document.querySelectorAll('audio');
 items.forEach(audio => {
   sounds.push(audio.id);
@@ -32,7 +33,8 @@ var buttonContainer = document.getElementById("buttonContainer");
 sounds.forEach((sound) => {
   let btn = document.createElement("button");
   btn.classList.add("btn");
-  btn.innerText = sound;
+  btn.innerText = serial_number + "." + sound;
+  serial_number ++;
   btn.addEventListener("click", () => {
 
     if(soundtemp1 === ""){stopSounds(sound);soundtemp1 = sound;}
@@ -54,10 +56,10 @@ sounds.forEach((sound) => {
     }
   });
   // 將按鈕添加到按鈕容器中
-  buttonContainer.appendChild(btn);
+  ////buttonContainer.appendChild(btn);
   document.getElementById("buttons").appendChild(btn);
   // 添加 CSS 類來實現按鈕的自動換行
-  buttonContainer.classList.add("wrap");
+  ////buttonContainer.classList.add("wrap");
 });
 
 function stopSounds(test) {
