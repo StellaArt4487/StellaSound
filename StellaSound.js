@@ -33,8 +33,8 @@ var buttonContainer = document.getElementById("buttonContainer");
 sounds.forEach((sound) => {
   let btn = document.createElement("button");
   btn.classList.add("btn");
-  btn.innerText = serial_number +  sound;
-  serial_number = serial_number + 1;
+  btn.innerText = serial_number + ". " + sound;  // 设置按钮文本为序号 + 音频 ID
+  serial_number++;  // 序号递增
   btn.addEventListener("click", () => {
 
     if(soundtemp1 === ""){stopSounds(sound);soundtemp1 = sound;}
@@ -56,10 +56,8 @@ sounds.forEach((sound) => {
     }
   });
   // 將按鈕添加到按鈕容器中
-  ////buttonContainer.appendChild(btn);
-  document.getElementById("buttons").appendChild(btn);
-  // 添加 CSS 類來實現按鈕的自動換行
-  ////buttonContainer.classList.add("wrap");
+  buttonContainer.appendChild(btn);
+  ////document.getElementById("buttons").appendChild(btn);
 });
 
 function stopSounds(test) {
