@@ -33,7 +33,7 @@ var buttonContainer = document.getElementById("buttonContainer");
 sounds.forEach((sound) => {
   let btn = document.createElement("button");
   btn.classList.add("btn");
-  btn.innerText = serial_number + "." + sound;
+  btn.innerText = serial_number +  sound;
   serial_number = serial_number + 1;
   btn.addEventListener("click", () => {
 
