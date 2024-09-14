@@ -28,15 +28,16 @@ let flagfirst = 1;
 let playSequence = [];
 let randomplayiset = [];
 
-var buttonContainer = document.getElementById("buttonContainer");
+// Initially show Tab 1
+document.getElementById("Tab1").classList.add("active-tab");
+document.getElementById("tabButton1").classList.add("active-button"); // 初始 Tab 1 按鈕變綠
 
 sounds.forEach((sound) => {
   let btn = document.createElement("button");
   btn.classList.add("btn");
   btn.innerText = serial_number.toString() + ". " + sound;  // 设置按钮文本为序号 + 音频 ID
-  serial_number++;  // 序号递增
-  btn.addEventListener("click", () => {
 
+  btn.addEventListener("click", () => {
     if(soundtemp1 === ""){stopSounds(sound);soundtemp1 = sound;}
     else{stopSounds(soundtemp1);}
     
@@ -56,8 +57,28 @@ sounds.forEach((sound) => {
     }
   });
   // 將按鈕添加到按鈕容器中
-  document.getElementById("buttons").appendChild(btn);
+  //document.getElementById("buttons").appendChild(btn);
+  // 確認分頁容器存在並嘗試添加按鈕
+  let container = document.getElementById("buttonContainerTab" + (Math.ceil(serial_number / 200))).appendChild(btn);
+  serial_number++;  // 序号递增
 });
+
+// Function to switch tabs
+function showTab(tabNumber) {
+  // Hide all tab contents
+  let allTabs = document.querySelectorAll('.tab-content');
+  allTabs.forEach(tab => tab.classList.remove('active-tab'));
+
+  // Show the selected tab
+  document.getElementById("Tab" + tabNumber).classList.add('active-tab');
+
+  // Reset all tab button colors
+  let allButtons = document.querySelectorAll('.tab-button');
+  allButtons.forEach(button => button.classList.remove('active-button'));
+
+  // Set the active button color
+  document.getElementById("tabButton" + tabNumber).classList.add('active-button');
+}
 
 function stopSounds(test) {
   

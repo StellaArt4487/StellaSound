@@ -11,6 +11,36 @@
     <button id="playSequenceButton" class="palybut">批次播放</button>
     <button id="playRamdonButton" class="palyRambut">隨機撥放</button>
 
+    <style>
+        .tab-button {
+            background-color: inherit;
+            padding: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            
+            border: 1px solid rgb(8, 8, 8); /*或none*/
+            border-radius: 5px;
+
+            width: 80px;
+
+            padding: 1px;
+            
+            font-size: 18px;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            transform: translate(10%, 100%);
+        }
+        .active-button {
+            background-color: #4CAF50; /* Green background for the active button */
+            color: white;              /* White text */
+        }
+        .tab-content {
+            display: none;  /* Initially hide all tabs */
+        }
+        .active-tab {
+            display: block;  /* Show the active tab */
+        }
+    </style>
+
     <audio id="八嘎(高音版)" src="./StellaSound/01.八嘎(高音版).mp3"></audio>
     <audio id="挖咧巴噗" src="./StellaSound/02.挖咧巴噗.MP3"></audio>
     <audio id="有嗎?我本來就很可愛吧?嘎～" src="./StellaSound/03.有嗎我本來就很可愛吧嘎.mp3"></audio>
@@ -457,13 +487,13 @@
     <audio id="欸 快點 快點" src="./StellaSound2/43.欸 快點 快點.mp3"></audio>
     <audio id="欸 各位" src="./StellaSound2/44.欸 各位.mp3"></audio>
     <audio id="我的臉好痛 只好揉一揉了" src="./StellaSound2/45.我的臉好痛 只好揉一揉了.mp3"></audio>
-    <audio id="嗯【長考】我不知道 【日文】" src="./StellaSound2/46.嗯【長考】我不知道 【日文】.mp3"></audio>
-    <audio id="大家請多指教【日文】" src="./StellaSound2/47.大家請多指教【日文】.mp3"></audio>
+    <audio id="嗯~~~ 我不知道!【日文】" src="./StellaSound2/46.嗯【長考】我不知道 【日文】.mp3"></audio>
+    <audio id="大.家.請,多.指.教!【日文】" src="./StellaSound2/47.大家請多指教【日文】.mp3"></audio>
     <audio id="好可怕" src="./StellaSound2/48.好可怕.mp3"></audio>
-    <audio id="nick name" src="./StellaSound2/49.nick name.mp3"></audio>
+    <audio id="nick name(綽號)" src="./StellaSound2/49.nick name.mp3"></audio>
     <audio id="好難去做決定喔" src="./StellaSound2/50.好難去做決定喔.mp3"></audio>
     <audio id="【女武神noise】02" src="./StellaSound2/51.【女武神noise】02.mp3"></audio>
-    <audio id="救命 中風啦" src="./StellaSound2/52.救命 中風啦.mp3"></audio>
+    <audio id="救命~ 中風啦" src="./StellaSound2/52.救命 中風啦.mp3"></audio>
     <audio id="好聰明" src="./StellaSound2/53.好聰明.mp3"></audio>
     <audio id="對x5" src="./StellaSound2/54.對x5.mp3"></audio>
     <audio id="X連福利熊" src="./StellaSound2/55.X連福利熊.mp3"></audio>
@@ -502,19 +532,40 @@
     <audio id="ㄜ～～～" src="./StellaSound2/88.ㄜ～～～.mp3"></audio>
     <audio id="喝咖啡 吃甜食 又讓你胃食道逆流了嗎" src="./StellaSound2/89.喝咖啡 吃甜食 又讓你胃食道逆流了嗎.mp3"></audio>
     <audio id="牙白(やばい)" src="./StellaSound2/90.牙白(やばい).mp3"></audio>
+    <audio id="吧噗吧噗吧噗吧噗PONPONPON(有ED背景)" src="./StellaSound2/91.吧噗吧噗吧噗吧噗PONPONPON(有ED背景).mp3"></audio>
+    <audio id="嗚呼～" src="./StellaSound2/92.嗚呼～.mp3"></audio>
     <!--
     <audio id="" src="./StellaSound2/"></audio>
     -->
     
     <div id="buttons"></div>
     <div class="button-container" id="buttonContainer"></div>   
-    
+    <!--
     <script src="StellaSound.js"></script>
     <script src="button.js"></script>
     <link rel= "stylesheet" href= "StellaSound.css">
-
+    -->
 </head>
 <body>
     
+    <button id="tabButton1" class="tab-button"  onclick="showTab(1)">1-200</button>
+    <button id="tabButton2" class="tab-button"  onclick="showTab(2)">201-400</button>
+    <button id="tabButton3" class="tab-button"  onclick="showTab(3)">401-</button>
+    
+    <div id="Tab1" class="tab-content">
+        <div id="buttonContainerTab1"></div>
+    </div>
+
+    <div id="Tab2" class="tab-content">
+        <div id="buttonContainerTab2"></div>
+    </div>
+
+    <div id="Tab3" class="tab-content">
+        <div id="buttonContainerTab3"></div>
+    </div>
+
+    <script src="StellaSound.js"></script>
+    <script src="button.js"></script>
+    <link rel= "stylesheet" href= "StellaSound.css">
 </body>
 </html>
