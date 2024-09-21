@@ -161,18 +161,13 @@ function processInput() {
   
   // 將輸入的字串按照空格分割，並存入陣列
   let inputArray = input.split(' ');//Array = input.split(' '); // 以空格為分隔符
+  inputArray = inputArray.filter(element => element !== ' ' && element !== '' && element <= sounds.length);
 
   for(let i = 0;i < inputArray.length;i++)
   {
     inputArray[i] = inputArray[i]-1;
-    //if(((inputArray[i]-1) <= sounds.length) && (inputArray[i]-1 >= 0))
-    if(inputArray[i] <= sounds.length)
-    {
-      if(inputArray[i] >= 0)
-      {
-        playSequence.push(sounds[inputArray[i]]);
-      }
-    }
+    
+    playSequence.push(sounds[inputArray[i]]);
   }
   flag = 1;
 
