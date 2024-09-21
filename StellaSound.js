@@ -164,7 +164,8 @@ function processInput() {
 
   for(let i = 0;i < inputArray.length;i++)
   {
-    if(((inputArray[i]-1) <= sounds.length) && (inputArray[i]-1 >= 0))
+    //if(((inputArray[i]-1) <= sounds.length) && (inputArray[i]-1 >= 0))
+    if((inputArray[i]-1) <= sounds.length)
     {
       playSequence.push(sounds[inputArray[i]-1]);
     }
