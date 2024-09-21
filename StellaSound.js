@@ -153,3 +153,24 @@ function randomplay(){
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
+
+// 創建一個函數來處理輸入
+function processInput() {
+  // 獲取輸入框中的值
+  let input = document.getElementById("userInput").value;
+  
+  // 將輸入的字串按照空格分割，並存入陣列
+  let inputArray = input.split(' ');//Array = input.split(' '); // 以空格為分隔符
+
+  for(let i = 0;i < inputArray.length;i++)
+  {
+    if(((inputArray[i]-1) <= sounds.length) && (inputArray[i]-1 >= 0))
+    {
+      playSequence.push(sounds[inputArray[i]-1]);
+    }
+  }
+  flag = 1;
+
+  playSoundsInSequence(playSequence);
+  
+}
