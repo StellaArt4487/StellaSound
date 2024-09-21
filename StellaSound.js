@@ -168,7 +168,10 @@ function processInput() {
     //if(((inputArray[i]-1) <= sounds.length) && (inputArray[i]-1 >= 0))
     if(inputArray[i] <= sounds.length)
     {
-      playSequence.push(sounds[inputArray[i]]);
+      if(inputArray[i] >= 0)
+      {
+        playSequence.push(sounds[inputArray[i]]);
+      }
     }
   }
   flag = 1;
