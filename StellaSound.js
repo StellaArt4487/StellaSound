@@ -164,10 +164,11 @@ function processInput() {
 
   for(let i = 0;i < inputArray.length;i++)
   {
+    inputArray[i] = inputArray[i]-1;
     //if(((inputArray[i]-1) <= sounds.length) && (inputArray[i]-1 >= 0))
-    if((inputArray[i]-1) <= sounds.length)
+    if(inputArray[i] <= sounds.length)
     {
-      playSequence.push(sounds[inputArray[i]-1]);
+      playSequence.push(sounds[inputArray[i]]);
     }
   }
   flag = 1;
