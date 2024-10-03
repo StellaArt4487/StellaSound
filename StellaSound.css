@@ -121,6 +121,46 @@
   .btn:focus {
     outline: 0; /*或none*/
   }
-  
 
-  
+  /**/
+  /* 按鈕和輸入框容器設置 */
+#buttonContainer , #inputContainer{
+  display: flex;
+  flex-wrap: wrap; /* 按鈕和輸入框超出容器寬度時自動換行 */
+  margin: 0px;
+  gap: 10px; /* 設置按鈕或輸入框之間的間隔 */
+  transform: translate(0%, 30%);
+}
+
+/* 設置按鈕大小與樣式 */
+.array-button {
+  width: 50px;
+  height: 30px;
+  background-color: #7e32d6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 設置輸入框大小與樣式 */
+.array-input {
+  width: 50px;
+  height: 25px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* 讓 padding 不會影響寬度計算 */
+  /* 新增的屬性，讓文字居中 */
+  text-align: center; /* 讓輸入框內的文字水平居中 */
+}
+
+/* 讓按鈕在被按下時有交互效果
+.array-button:active {
+/  background-color: #45a049;
+}
+*/
+
+.array-button:hover {
+  background-color: #a08845; /* 滑鼠懸停時的顏色 */
+}

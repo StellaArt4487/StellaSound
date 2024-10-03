@@ -172,5 +172,15 @@ function processInput() {
   flag = 1;
 
   playSoundsInSequence(playSequence);
-  
 }
+
+//指定聲音
+function pointSount(index){
+  if(index <= sounds.length)
+  {
+    playSequence.push(sounds[index-1]);
+    flag = 1;
+    playSoundsInSequence(playSequence);
+  }
+}
+
