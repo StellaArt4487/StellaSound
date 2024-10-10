@@ -8,15 +8,14 @@
 
     <h1 class="text">黛菈之聲</h1>
     <div role="button" class="info" id="butt">Stella Info</div>
+    <!---
+    <button id="recommendButton">隨機推薦影片</button>
+    ---->
+    <div id="videoContainer"></div>
     <button id="playSequenceButton" class="palybut">批次播放</button>
     <button id="playRamdonButton" class="palyRambut">隨機撥放</button>
     <input type="text" id="userInput" placeholder="請輸入聲音編號...">
     <button onclick="processInput()">點聲</button>
-
-    <!---
-    <input type="text" id="Input1" placeholder="請輸入聲音編號...">
-    <button onclick="pointSount()">Input1</button>
-    ---->
     <style>
         .tab-button {
             background-color: inherit;
@@ -738,6 +737,16 @@
     <audio id="不錯耶【日文】" src="./StellaSound3/87.不錯耶【日文】.mp3"></audio>
     <audio id="要注意防曬喔" src="./StellaSound3/88.要注意防曬喔.mp3"></audio>
     <audio id="嗯~ 很好很好" src="./StellaSound3/89.嗯 很好很好.mp3"></audio>
+    <audio id="せーのー" src="./StellaSound3/90.せーのー.mp3"></audio>
+    <audio id="大病初癒的生日歌" src="./StellaSound3/91.大病初癒的生日歌.mp3"></audio>
+    <audio id="以上言論純許徐？純屬節目效果如有雷同純粹贊助" src="./StellaSound3/92.以上言論純許徐？純屬節目效果如有雷同純粹贊助.mp3"></audio>
+    <audio id="可惡 (日+中)" src="./StellaSound3/93.可惡 (日+中).mp3"></audio>
+    <audio id="你是誰啊 老公" src="./StellaSound3/94.你是誰啊 老公.mp3"></audio>
+    <audio id="我扛 我坦 我跟你拚了" src="./StellaSound3/95.我扛 我坦 我跟你拚了.mp3"></audio>
+    <audio id="看耳皮喉科(有剪接)" src="./StellaSound3/96.看耳皮喉科(有剪接).mp3"></audio>
+    <audio id="祝福你 年年有今日歲歲有今朝" src="./StellaSound3/97.祝福你 年年有今日歲歲有今朝.mp3"></audio>
+    <audio id="絕對不要(日)" src="./StellaSound3/98.絕對不要(日).mp3"></audio>
+    <audio id="溫卵 溫暖的之翼們" src="./StellaSound3/99.溫卵 溫暖的之翼們.mp3"></audio>
     <!--
     <audio id="" src="./StellaSound3/"></audio>
     -->
@@ -749,6 +758,8 @@
     <script src="button.js"></script>
     <link rel= "stylesheet" href= "StellaSound.css">
     -->
+    <script defer src="getYTdata.js"></script>
+
 </head>
 <body>
     <!-- 包裹按鈕和輸入框陣列的容器 -->
@@ -780,5 +791,6 @@
     <script src="StellaSound.js"></script>
     <script src="button.js"></script>
     <link rel= "stylesheet" href= "StellaSound.css">
+
 </body>
 </html>

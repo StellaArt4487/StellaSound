@@ -164,3 +164,8 @@
 .array-button:hover {
   background-color: #a08845; /* 滑鼠懸停時的顏色 */
 }
+
+.video-wrapper {
+  margin-top: -2%;     /* 頂部距離 */
+  margin-left: 0%;
+}
