@@ -528,7 +528,8 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 */
 videoContainer.innerHTML = `
-  <div id="youtube-live">
+  <div class="video-wrapper">
+  <h3>推薦影片：<br>
   <a href="https://www.youtube.com/watch?v=${randomVideoUrl}" target="_blank">
     <img src="https://img.youtube.com/vi/${randomVideoUrl}/hqdefault.jpg" alt="YouTube Live Thumbnail" style="width: 100%;hight: auto; max-width: 200px;">
   </a>
