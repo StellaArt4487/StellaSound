@@ -32,7 +32,7 @@ for (let i = 1; i <= numButtons; i++) {
       values.push(input.value);
     });
     // 輸出結果到控制台
-    console.log(values[i]);
+    console.log(values[i-1]);
 
       pointSount(values[i-1]);
     });

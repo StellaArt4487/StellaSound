@@ -902,12 +902,12 @@
     <audio id="【哈欠】07" src="./StellaSound4/49.【哈欠】07.mp3"></audio>
     <audio id="很有緣" src="./StellaSound4/50.很有緣.mp3"></audio>
     <audio id="對阿" src="./StellaSound4/51.對阿.mp3"></audio>
-    <audio id="巨海豹 02" src="./StellaSound4/52.巨海豹 02.mp3"></audio>
-    <audio id="那個阿伯是怎麼回事啊" src="./StellaSound4/53.那個阿伯是怎麼回事啊.mp3"></audio>
-    <audio id="少年 加油【日語】" src="./StellaSound4/54.少年 加油【日語】.mp3"></audio>
-    <audio id="把把的研究室" src="./StellaSound4/55.把把的研究室.mp3"></audio>
-    <audio id="尷尷尬尬的" src="./StellaSound4/56.尷尷尬尬的.mp3"></audio>
-    <audio id="我先把他處理掉" src="./StellaSound4/57.我先把他處理掉.mp3"></audio>
+    <audio id="巨海豹 02" src="./StellaSound4/52.巨海豹 02.mp3" data-tags="氣質蛋雕"></audio>
+    <audio id="那個阿伯是怎麼回事啊" src="./StellaSound4/53.那個阿伯是怎麼回事啊.mp3" data-tags="中文"></audio>
+    <audio id="少年 加油【日語】" src="./StellaSound4/54.少年 加油【日語】.mp3" data-tags="中文,激動"></audio>
+    <audio id="把把的研究室" src="./StellaSound4/55.把把的研究室.mp3" data-tags="遊戲"></audio>
+    <audio id="尷尷尬尬的" src="./StellaSound4/56.尷尷尬尬的.mp3" data-tags="機器人"></audio>
+    <audio id="我先把他處理掉" src="./StellaSound4/57.我先把他處理掉.mp3" data-tags="氣質蛋雕"></audio>
     
     <!--
     <audio id="" src="./StellaSound4/"></audio>
@@ -929,12 +929,51 @@
     <div id="buttonContainer"></div>
 
     <!-- 換頁按鈕 -->
+    <button id="tabButton0" class="tab-button"  onclick="showTab(0)">分類</button>
     <button id="tabButton1" class="tab-button"  onclick="showTab(1)">001-200</button>
     <button id="tabButton2" class="tab-button"  onclick="showTab(2)">201-400</button>
     <button id="tabButton3" class="tab-button"  onclick="showTab(3)">401-600</button>
     <button id="tabButton4" class="tab-button"  onclick="showTab(4)">601-800</button>
     <button id="tabButton5" class="tab-button"  onclick="showTab(5)">801-</button>
     
+    <div id="Tab0" class="tab-content">
+        <div id="buttonContainerTab0"></div>
+        
+        <!-- 下拉選單 -->
+        <select id="tagSelect" style="display: none;">
+            <option value="empty"></option>
+            <option value="中文">中文</option>
+            <option value="台語">台語</option>
+            <option value="日語">日語</option>
+            <option value="英語">英語</option>
+            <option value="韓語">韓語</option>
+            <option value="吐槽">吐槽</option>
+            <option value="台詞">台詞</option>
+            <option value="各V">各V</option>
+            <option value="偷斗幫">偷斗幫</option>
+            <option value="正教">正教</option>
+            <option value="之翼">之翼</option>
+            <option value="嘴ㄆㄧㄚˊ">嘴ㄆㄧㄚˊ</option>
+            <option value="無奈">無奈</option>
+            <option value="激動">激動</option>
+            <option value="平淡">平淡</option>
+            <option value="疑問">疑問</option>
+            <option value="混亂">混亂</option>
+            <option value="機器人">機器人</option>
+            <option value="廣告">廣告</option>
+            <option value="廣播">廣播</option>
+            <option value="遊戲">遊戲</option>
+            <option value="可愛">可愛</option>
+            <option value="口癖">口癖</option>
+            <option value="旋律">旋律</option>
+            <option value="氣質蛋雕">氣質蛋雕</option>
+        </select>
+
+        <!-- 結果區域 -->
+        <div id="results"></div>
+
+    </div>
+
     <div id="Tab1" class="tab-content">
         <div id="buttonContainerTab1"></div>
     </div>
@@ -957,6 +996,7 @@
 
     <script src="StellaSound.js"></script>
     <script src="button.js"></script>
+    <script src="categorySelect.js"></script>
     <link rel= "stylesheet" href= "StellaSound.css">
 
 </body>

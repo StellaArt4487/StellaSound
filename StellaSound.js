@@ -59,7 +59,7 @@ sounds.forEach((sound) => {
   // 將按鈕添加到按鈕容器中
   //document.getElementById("buttons").appendChild(btn);
   // 確認分頁容器存在並嘗試添加按鈕
-  let container = document.getElementById("buttonContainerTab" + (Math.ceil(serial_number / 200))).appendChild(btn);
+  document.getElementById("buttonContainerTab" + (Math.ceil(serial_number / 200))).appendChild(btn);
   serial_number++;  // 序号递增
 });
 
@@ -78,6 +78,13 @@ function showTab(tabNumber) {
 
   // Set the active button color
   document.getElementById("tabButton" + tabNumber).classList.add('active-button');
+
+  // 如果是分類分頁，顯示下拉選單
+  if (tabNumber === 0) {
+    tagSelect.style.display = "block";
+  } else {
+    tagSelect.style.display = "none";
+  }
 }
 
 function stopSounds(test) {
@@ -183,4 +190,3 @@ function pointSount(index){
     playSoundsInSequence(playSequence);
   }
 }
-

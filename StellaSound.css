@@ -18,7 +18,7 @@
     overflow: hidden;
     text-align: center;
   }*/
-  
+ 
   html { height: 100%;
          width:100%;}  
   body {
@@ -168,4 +168,37 @@
 .video-wrapper {
   margin-top: -2%;     /* 頂部距離 */
   margin-left: 0%;
+}
+
+#tagSelect {
+  
+  display: flex;
+  margin-top: 5%;     /* 頂部距離 */
+  margin-left: 1%;
+  font-size: large;
+  z-index: 10; /* 保證下拉選單不被其他元素遮擋 */
+}
+
+.sound-button
+{
+  border-radius: 5px;
+  border: 2px solid #4CAF50; /*或none*/
+  margin: 5px;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+  height: auto;
+  width:auto;
+  
+  /*position: relative;*/
+  left: 5%;
+  transform: translate(0%, 50%);
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.btn:focus {
+  outline: 0; /*或none*/
 }
