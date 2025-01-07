@@ -38,10 +38,10 @@ tagSelect.addEventListener("change", () => {
 });
 
 const optionsForB  = {
-    請選擇分類 :[],
+    請選擇分類 :["--請選擇--"],
     語言      : ["中文","台語","日語","英語","韓語"],
     情境      : ["吐槽","台詞"],
-    提及and模仿  : ["各V","偷斗幫","正教","之翼"],
+    提及and模仿  : ["黑銀夜烏","庫路","偷斗幫","正教","之翼"],
     情感      : ["無奈","激動","平淡","疑問","混亂"],
     腔調      : ["機器人","廣告","廣播","遊戲","可愛"],
     其他      : ["嘴ㄆㄧㄚˊ", "口癖", "旋律","氣質蛋雕"],
@@ -72,7 +72,7 @@ totalSelect.addEventListener("change", () => {
   } else {
     // 如果 A 沒有選擇，添加一個提示選項
     const noOption = document.createElement("option");
-    noOption.textContent = "--請先選擇A--";
+    noOption.textContent = "--請先選擇--";
     noOption.value = "";
     dropdownB.appendChild(noOption);
   }
