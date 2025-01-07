@@ -170,11 +170,16 @@
   margin-left: 0%;
 }
 
+#totalSelect {
+  
+  transform: translate(8%, 120%);
+  font-size: large;
+  z-index: 10; /* 保證下拉選單不被其他元素遮擋 */
+}
+
 #tagSelect {
   
-  display: flex;
-  margin-top: 5%;     /* 頂部距離 */
-  margin-left: 1%;
+  transform: translate(120%, 20%);
   font-size: large;
   z-index: 10; /* 保證下拉選單不被其他元素遮擋 */
 }

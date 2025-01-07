@@ -81,8 +81,10 @@ function showTab(tabNumber) {
 
   // 如果是分類分頁，顯示下拉選單
   if (tabNumber === 0) {
+    totalSelect.style.display = "block";
     tagSelect.style.display = "block";
   } else {
+    totalSelect.style.display = "none";
     tagSelect.style.display = "none";
   }
 }
