@@ -37,6 +37,12 @@ sounds.forEach((sound) => {
   btn.classList.add("btn");
   btn.innerText = serial_number.toString() + ". " + sound;  // 设置按钮文本为序号 + 音频 ID
 
+  // 將按鈕添加到按鈕容器中
+  //document.getElementById("buttons").appendChild(btn);
+  // 確認分頁容器存在並嘗試添加按鈕
+  document.getElementById("buttonContainerTab" + (Math.ceil(serial_number / 200))).appendChild(btn);
+  serial_number++;  // 序号递增
+
   btn.addEventListener("click", () => {
     if(soundtemp1 === ""){stopSounds(sound);soundtemp1 = sound;}
     else{stopSounds(soundtemp1);}
@@ -56,11 +62,6 @@ sounds.forEach((sound) => {
       soundtemp1 = "";
     }
   });
-  // 將按鈕添加到按鈕容器中
-  //document.getElementById("buttons").appendChild(btn);
-  // 確認分頁容器存在並嘗試添加按鈕
-  document.getElementById("buttonContainerTab" + (Math.ceil(serial_number / 200))).appendChild(btn);
-  serial_number++;  // 序号递增
 });
 
 // Function to switch tabs
