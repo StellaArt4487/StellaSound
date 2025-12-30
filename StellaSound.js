@@ -92,8 +92,8 @@ function playSingleSound(soundItem) {
     }
 
     // 建立新的 Audio 實例
-    currentAudio = new Audio(soundItem.src);
-    currentAudio.play();
+    currentAudio = soundItem;//new Audio(soundItem.src);
+    currentAudio.play().catch(err => console.error(err));
 
     // 播放完自動清空
     currentAudio.addEventListener("ended", () => {
