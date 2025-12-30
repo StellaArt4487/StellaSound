@@ -125,7 +125,7 @@
   /**/
   /* 按鈕和輸入框容器設置 */
 #buttonContainer , #inputContainer{
-  display: flex;
+  display: block;
   flex-wrap: wrap; /* 按鈕和輸入框超出容器寬度時自動換行 */
   margin: 0px;
   gap: 10px; /* 設置按鈕或輸入框之間的間隔 */
