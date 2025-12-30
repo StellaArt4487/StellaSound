@@ -10,6 +10,12 @@ let sounds = [
             ]; //<audio> tag's id
 */
 /***************************************************************************/
+// -------------------------------------------------------------
+// 全站唯一 Audio Player
+// -------------------------------------------------------------
+const audioPlayer = new Audio();
+audioPlayer.preload = "auto";
+
 // 創建一個空的陣列來存放具有 "item" 類的元素
 let sounds = [];
 
@@ -50,7 +56,8 @@ sounds.forEach((sound) => {
   //serial_number++;  // 序号递增
 
   btn.addEventListener("click", () => {
-    playSingleSound(new Audio(sound.src));
+    //playSingleSound(new Audio(sound.src));
+    playSingleSound(sound);
   });
 });
 
@@ -92,7 +99,7 @@ function playSingleSound(soundItem) {
     }
 
     // 建立新的 Audio 實例
-    currentAudio = soundItem;//new Audio(soundItem.src);
+    currentAudio = new Audio(soundItem.src);
     currentAudio.play().catch(err => console.error(err));
 
     // 播放完自動清空
@@ -101,6 +108,30 @@ function playSingleSound(soundItem) {
         soundtemp = "";
         flag = 0;
     });
+
+/*
+if (!soundItem || !soundItem.src) {
+    console.warn("Invalid sound item:", soundItem);
+    return;
+  }
+
+  // 若正在播放，先停止
+  audioPlayer.pause();
+  audioPlayer.currentTime = 0;
+
+  audioPlayer.src = soundItem.src;
+  audioPlayer.load();
+
+  audioPlayer.oncanplaythrough = () => {
+    audioPlayer.play().catch(err => {
+      console.error("Play failed:", err, soundItem.src);
+    });
+  };
+
+  audioPlayer.onerror = () => {
+    console.error("Audio load error:", soundItem.src);
+  };
+*/
 }
 
 // -------------------------------------------------------------
@@ -159,6 +190,7 @@ function processInput() {
 function pointSount(index){
   if(index <= sounds.length)
   {
-    playSingleSound(new Audio(sounds[index-1].src));
+    //playSingleSound(new Audio(sounds[index-1].src));
+    playSingleSound(sounds[index-1]);
   }
 }
