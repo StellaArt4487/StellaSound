@@ -3,6 +3,16 @@ butt.addEventListener("click", () => {
     window.open('https://lit.link/en/limnosstella');
 
   });
+butt1.addEventListener("click", () => {
+
+    window.open('https://jasonlin4487.github.io/Get_stella_water/');
+
+  });
+butt2.addEventListener("click", () => {
+
+    window.open('https://stellaart4487.github.io/StellMinigame/');
+
+  });
 
 // 取得按鈕和輸入框容器
 const buttonContainer = document.getElementById("buttonContainer");
