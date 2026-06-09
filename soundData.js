@@ -1011,6 +1011,8 @@ const soundList = [
 { id: "不可能！絕對不可能！" ,src:"./StellaSound5/02.不可能！絕對不可能！.mp3" ,tags:["中文","激動"]},
 { id: "你什麼時候才要離開你的幻想小世界啊" ,src:"./StellaSound5/03.你什麼時候才要離開你的幻想小世界啊.mp3" ,tags:["中文","無奈"]},
 { id: "等一下 你們在幹嘛阿 錢太多膩" ,src:"./StellaSound5/04.等一下 你們在幹嘛阿 錢太多膩.mp3" ,tags:["中文","無奈"]},
-{ id: "FF勝利音效 CV黛菈" ,src:"./StellaSound5/05.FF勝利音效 CV黛菈.mp3" ,tags:["可愛","旋律"]}
+{ id: "FF勝利音效 CV黛菈" ,src:"./StellaSound5/05.FF勝利音效 CV黛菈.mp3" ,tags:["可愛","旋律"]},
+{ id: "真劍勝負！" ,src:"./StellaSound5/06.真劍勝負！.mp3" ,tags:["日文","台詞"]},
+{ id: "邪魔をするな～" ,src:"./StellaSound5/07.邪魔をするな～.mp3" ,tags:["日文","台詞"]}
 ];
 //{ id: "" ,src:"./StellaSound5/" ,tags:["]},
