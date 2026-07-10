@@ -1013,6 +1013,15 @@ const soundList = [
 { id: "等一下 你們在幹嘛阿 錢太多膩" ,src:"./StellaSound5/04.等一下 你們在幹嘛阿 錢太多膩.mp3" ,tags:["中文","無奈"]},
 { id: "FF勝利音效 CV黛菈" ,src:"./StellaSound5/05.FF勝利音效 CV黛菈.mp3" ,tags:["可愛","旋律"]},
 { id: "真劍勝負！" ,src:"./StellaSound5/06.真劍勝負！.mp3" ,tags:["日文","台詞"]},
-{ id: "邪魔をするな～" ,src:"./StellaSound5/07.邪魔をするな～.mp3" ,tags:["日文","台詞"]}
+{ id: "邪魔をするな～" ,src:"./StellaSound5/07.邪魔をするな～.mp3" ,tags:["日文","台詞"]},
+{ id:"2025_30" ,src:"./StellaSound5/08.2025_30.mp3" ,tags:["台詞"]},
+{ id:"2025_75" ,src:"./StellaSound5/09.2025_75.mp3" ,tags:["台詞"]},
+{ id:"2025_150" ,src:"./StellaSound5/10.2025_150.mp3" ,tags:["台詞"]},
+{ id:"2025_300" ,src:"./StellaSound5/11.2025_300.mp3" ,tags:["台詞"]},
+{ id:"2025_750" ,src:"./StellaSound5/12.2025_750.mp3" ,tags:["台詞"]},
+{ id:"2025_1500" ,src:"./StellaSound5/13.2025_1500.mp3" ,tags:["台詞"]},
+{ id:"Stella_DUDU" ,src:"./StellaSound5/14.Stella_DUDU.mp3 " ,tags:["台詞"]},
+{ id:"260427_Stella_vo5_女武神Noise" ,src:"./StellaSound5/15.260427_Stella_vo5_女武神Noise.wav" ,tags:["台詞"]},
+{ id:"260427_Stella_vo6_女武神屑笑" ,src:"./StellaSound5/16.260427_Stella_vo6_女武神屑笑.wav" ,tags:["台詞"]}
 ];
 //{ id: "" ,src:"./StellaSound5/" ,tags:["]},
